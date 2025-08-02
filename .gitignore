@@ -248,7 +248,6 @@ $RECYCLE.BIN/
 *.ipynb
 
 # Data files (large files)
-*.csv
 *.xlsx
 *.xls
 *.parquet
