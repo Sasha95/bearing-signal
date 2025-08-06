@@ -7,7 +7,7 @@ from training import get_device
 def predict_test_bearing(model, scaler, pca):
     """Предсказание состояния тестового подшипника"""
     print("\nЗагрузка тестовых данных...")
-    test_data = pd.read_csv('test_bearing.csv', sep=';')
+    test_data = pd.read_csv('test_bearing2.csv', sep=';')
     
     print(f"Размер тестовых данных: {test_data.shape}")
     
