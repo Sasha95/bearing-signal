@@ -30,9 +30,9 @@ def load_and_preprocess_data():
     print("Загрузка данных...")
     
     # Загрузка данных с правильным разделителем
-    bad_data = pd.read_csv('bad_bearing(0).csv', sep=';')
-    normal_data = pd.read_csv('normal_bearing(0.5).csv', sep=';')
-    new_data = pd.read_csv('new_bearing(1).csv', sep=';')
+    bad_data = pd.read_csv('data/bad_bearing(0).csv', sep=';')
+    normal_data = pd.read_csv('data/normal_bearing(0.5).csv', sep=';')
+    new_data = pd.read_csv('data/new_bearing(1).csv', sep=';')
     
     print(f"Размеры данных:")
     print(f"Плохой подшипник: {bad_data.shape}")

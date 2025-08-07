@@ -47,5 +47,4 @@ def visualize_results(train_losses, test_losses, test_accuracies, predictions, l
     axes[1, 1].grid(True)
     
     plt.tight_layout()
-    plt.savefig('bearing_analysis_results.png', dpi=300, bbox_inches='tight')
-    plt.show() 
+    plt.savefig('visualizations/bearing_analysis_results.png', dpi=300, bbox_inches='tight')

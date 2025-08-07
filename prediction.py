@@ -4,10 +4,13 @@ import numpy as np
 from dataset import process_numeric_data
 from training import get_device
 
-def predict_test_bearing(model, scaler, pca):
+def predict_test_bearing(model, scaler, pca, test_data=None):
     """Предсказание состояния тестового подшипника"""
-    print("\nЗагрузка тестовых данных...")
-    test_data = pd.read_csv('test_bearing2.csv', sep=';')
+    if test_data is None:
+        print("\nЗагрузка тестовых данных...")
+        test_data = pd.read_csv('data/test_bearing2.csv', sep=';')
+    else:
+        print(f"\nИспользование переданных данных размером: {test_data.shape}")
     
     print(f"Размер тестовых данных: {test_data.shape}")
     
@@ -70,7 +73,7 @@ def predict_test_bearing(model, scaler, pca):
             state = "Новый"
             state_value = 100.0
     
-    print(f"\nРезультат предсказания для test_bearing.csv:")
+    print(f"\nРезультат предсказания:")
     print(f"Среднее предсказание: {mean_prediction:.2f}%")
     print(f"Состояние подшипника: {state} ({state_value}%)")
     print(f"Процент износа подшипника: {100 - mean_prediction:.2f}%")
