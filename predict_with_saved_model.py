@@ -60,8 +60,7 @@ def main():
     
     # Пример использования с тестовыми данными
     test_files = [
-        "data/test_bearing.csv",
-        "data/test_bearing2.csv"
+        "data/test_bearing.csv"
     ]
     
     for test_file in test_files:

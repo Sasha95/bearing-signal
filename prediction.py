@@ -8,7 +8,7 @@ def predict_test_bearing(model, scaler, pca, test_data=None):
     """Предсказание состояния тестового подшипника"""
     if test_data is None:
         print("\nЗагрузка тестовых данных...")
-        test_data = pd.read_csv('data/test_bearing2.csv', sep=';')
+        test_data = pd.read_csv('data/test_bearing.csv', sep=';')
     else:
         print(f"\nИспользование переданных данных размером: {test_data.shape}")
     
